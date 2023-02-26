@@ -25,13 +25,13 @@ public class AllConfig {
     public static final String VxAppId = "wxd0a23f942ef41dad";
     public static final String VxAppSecret = "d77322548e7af977e10852bd13899a26";
     public static final String WeatherKey = "1a52719700743da548a2515f9f5a776c";
-    //public static final String WeatherKey_HeFeng = "和风天气KEY";
+    public static final String WeatherKey_HeFeng = "和风天气KEY";
 
     //下列所有填写的  true 为开启， false 为不开启 ，#XXXXXX是颜色16进制HEX码（不知道颜色16进制HEX码可以百度）
     //系统开关
     public static final boolean OPEN_MESSAGE_SPLIT = true; //是否开启消息分裂（大于100字的消息会被分裂成多个,如tianGou超过了一百个字的话：{{tianGou.DATA}}{{tianGou1.DATA}}））
     public static final boolean OPEN_WEATHER_NOW = false; //切换天气类型为实时（false为天气预报，true为实时天气）
-    //public static final boolean OPEN_HF_WEATHER = false; //切换天气源为和风天气（目前只支持天气预报）
+    public static final boolean OPEN_HF_WEATHER = false; //切换天气源为和风天气（目前只支持天气预报）
     public static final boolean OPEN_MASTER_MODEL = false; //是否开启主人模式。开启后，后面的用户只会收到第一个用户的内容。
     public static final boolean OPEN_RANDOM_COLOR = true; //是否开启随机消息颜色
     public static final String[] random_colors = {"#FFCCCC", "#33A1C9", "#DC143C","#FF0000","#6B8E23","#236B8E","#FF7F00"}; //参与随机的颜色,颜色为颜色HEX码（不知道可以百度）
@@ -63,9 +63,9 @@ public class AllConfig {
     public static final FunctionConfig open_world_read = new FunctionConfig(true,"#FF7F00"); //是否开启世界新闻
     public static final FunctionConfig open_random_read = new FunctionConfig(true,"#FF7F00"); //是否开启随机短句
     public static final FunctionConfig open_wozairenjian = new FunctionConfig(true,"#FF7F00"); //是否开启散文集我在人间凑日子
-    //public static final FunctionConfig open_poetry = new FunctionConfig(false,"#FF7F00"); //是否开启随机诗句(暂时无法使用了)
-    //public static final FunctionConfig open_english = new FunctionConfig(false,"#FF7F00"); //是否开启每日英语(暂时无法使用了)
-    //public static final FunctionConfig open_miyu = new FunctionConfig(false,"#FF7F00"); //是否开启谜语(暂时无法使用了)
+    public static final FunctionConfig open_poetry = new FunctionConfig(false,"#FF7F00"); //是否开启随机诗句(暂时无法使用了)
+    public static final FunctionConfig open_english = new FunctionConfig(false,"#FF7F00"); //是否开启每日英语(暂时无法使用了)
+    public static final FunctionConfig open_miyu = new FunctionConfig(false,"#FF7F00"); //是否开启谜语(暂时无法使用了)
     public static final FunctionConfig open_horoscope= new FunctionConfig(false,"#FF7F00"); //是否开启星座解析(只计算第一个birthDay的星座)
     public static final FunctionConfig random_module = new FunctionConfig(true,"#FF7F00"); //随机一个开启了的额外类型消息(开启以后，只会推送随机的)
 
