@@ -58,7 +58,7 @@ public class AllConfig {
     public static final FunctionConfig open_xinGuan_info = new FunctionConfig(true,"#FF7F00"); //是否开启用户城市新冠信息查询
     public static final FunctionConfig open_history_today = new FunctionConfig(false,"#FF7F00"); //是否开启历史上的今天
     public static final FunctionConfig open_qinghua = new FunctionConfig(true,"#FF7F00"); //是否开启情话一句
-    //public static final FunctionConfig open_dongman = new FunctionConfig(false,"#FF7F00"); //是否开启动漫台词(暂时无法使用了)
+    public static final FunctionConfig open_dongman = new FunctionConfig(false,"#FF7F00"); //是否开启动漫台词(暂时无法使用了)
     public static final FunctionConfig open_tiangou = new FunctionConfig(true,"#FF7F00"); //是否开启舔狗日记
     public static final FunctionConfig open_world_read = new FunctionConfig(true,"#FF7F00"); //是否开启世界新闻
     public static final FunctionConfig open_random_read = new FunctionConfig(true,"#FF7F00"); //是否开启随机短句
@@ -69,25 +69,37 @@ public class AllConfig {
     public static final FunctionConfig open_horoscope= new FunctionConfig(false,"#FF7F00"); //是否开启星座解析(只计算第一个birthDay的星座)
     public static final FunctionConfig random_module = new FunctionConfig(true,"#FF7F00"); //随机一个开启了的额外类型消息(开启以后，只会推送随机的)
 
-     private static void init(){
+    private static void init(){
         //如果要多个人的话，就复制这个一遍，然后填写里面的内容。这里默认两个人,大伙应该是两个人吧（笑）
+        //如果开启了master模式，除第一个用户外，其他用户只需要填写微信号
+        //要计算几个日期，就写几个new BirthDay,第一个在模板中是{{birthDay.DATA}}，第二个是{{birthDay1.DATA}}，第三个是{{birthDay2.DATA}}以此类推
+        //  注意：日期里面的数字，填正常的数字就行了.比如1就是1，不要填01
+        //  注意：每个用户信息的最后一项不需要加逗号！！！
+        //new BirthDay()里面代表[年]、[月]、[日]、[是否是农历(true为农历、false为公历)]、[是否统计天数(true为统计，false为倒计时)]、[倒计时到0天提示信息(如果类型为统计可以不填)]
         userList.add(getUser(
-                "oUjrm5uH_tyUwHeJNt52ZzIseSBg",//扫码关注你的测试号以后，测试平台会出现TA的微信号
-                "楚楚可爱鸭",//咋称呼这个人
-                new BirthDay(1997,7,24,false),  //这个人的生日，最后的这个true/false，如果是过公历生日就写false，如果是过农历生日写true
-                new BirthDay(1997,9,19,true), //这个人对象的生日，最后的这个true/false，如果是过公历生日就写false，如果是过农历生日写true
-                "河南省开封市通许县",//这个人的详细地址
-                "开封",//这个人在的城市
-                "kxO9N2SskIlzte7bBb72hY0r-MPcvtTN2QbyX9o1XN8"));//要给这个人发送的模板ID
+                "oUjrm5uH_tyUwHeJNt52ZzIseSBg", //扫码关注你的测试号以后，测试平台会出现TA的微信号
+                "kxO9N2SskIlzte7bBb72hY0r-MPcvtTN2QbyX9o1XN8", //要给这个人发送的模板ID
+                "楚楚可爱鸭", //咋称呼这个人
+                "河南省开封市通许县", //这个人的详细地址
+                "开封", //这个人在的城市
+                new BirthDay(1997,7,24,true,false,"楚楚生日快乐！！"),
+                new BirthDay(1997,7,24,false,false,"生日快乐哦~~"),
+                new BirthDay(1997,7,24,true,true),
+                new BirthDay(2021,12,18,true,false,"周年快乐！！！")
+        ));
 
         userList.add(getUser(
-                "oUjrm5pMqu2HvAAItc4SkxSomfSE",
-                "万方",
-                new BirthDay(1997,9,19,true),  //这个人的生日，最后的这个true/false，如果是过公历生日就写false，如果是过农历生日写true
-                new BirthDay(1997,7,24,false), //这个人对象的生日，最后的这个true/false，如果是过公历生日就写false，如果是过农历生日写true
+                "oUjrm5pMqu2HvAAItc4SkxSomfSE",//扫码关注你的测试号以后，测试平台会出现TA的微信号
+                "kxO9N2SskIlzte7bBb72hY0r-MPcvtTN2QbyX9o1XN8",//要给这个人发送的模板ID
+                "w万方",//咋称呼这个人
                 "湖南省长沙市岳麓区",//这个人的详细地址
                 "长沙",//这个人在的城市
-                "kxO9N2SskIlzte7bBb72hY0r-MPcvtTN2QbyX9o1XN8"));//要给这个人发送的模板ID
+                new BirthDay(1997,9,19,false,false,"生日快乐哦~~"),
+                new BirthDay(1997,7,24,true,false,"楚楚生日快乐！！"),
+                new BirthDay(1997,7,24,true,true),
+                new BirthDay(2021,12,18,true,false,"周年快乐！！！")
+        ));
+
 
 
     }
