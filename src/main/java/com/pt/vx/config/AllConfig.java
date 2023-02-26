@@ -22,10 +22,10 @@ import java.util.List;
  *               -- 2022/10/25
  */
 public class AllConfig {
-    public static final String VxAppId = "微信的APPID";
-    public static final String VxAppSecret = "微信的密钥";
-    public static final String WeatherKey = "高德地图key";
-    public static final String WeatherKey_HeFeng = "和风天气KEY";
+    public static final String VxAppId = "wxd0a23f942ef41dad";
+    public static final String VxAppSecret = "d77322548e7af977e10852bd13899a26";
+    public static final String WeatherKey = "1a52719700743da548a2515f9f5a776c";
+    //public static final String WeatherKey_HeFeng = "和风天气KEY";
 
     //下列所有填写的  true 为开启， false 为不开启 ，#XXXXXX是颜色16进制HEX码（不知道颜色16进制HEX码可以百度）
     //系统开关
