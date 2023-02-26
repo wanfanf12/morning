@@ -82,10 +82,10 @@ public class AllConfig {
                 "楚楚可爱鸭", //咋称呼这个人
                 "河南省开封市通许县", //这个人的详细地址
                 "开封", //这个人在的城市
-                new BirthDay(1997,7,24,true,false,"楚楚生日快乐！！"),
+                new BirthDay(1997,7,24,false,false,"楚楚生日快乐！！"),
                 new BirthDay(1997,7,24,false,false,"生日快乐哦~~"),
                 new BirthDay(1997,7,24,true,true),
-                new BirthDay(2021,12,18,true,false,"周年快乐！！！")
+                new BirthDay(2021,12,18,false,true,"周年快乐！！！")
         ));
 
         userList.add(getUser(
@@ -95,9 +95,9 @@ public class AllConfig {
                 "湖南省长沙市岳麓区",//这个人的详细地址
                 "长沙",//这个人在的城市
                 new BirthDay(1997,9,19,false,false,"生日快乐哦~~"),
-                new BirthDay(1997,7,24,true,false,"楚楚生日快乐！！"),
+                new BirthDay(1997,7,24,false,false,"楚楚生日快乐！！"),
                 new BirthDay(1997,7,24,true,true),
-                new BirthDay(2021,12,18,true,false,"周年快乐！！！")
+                new BirthDay(2021,12,18,false,true,"周年快乐！！！")
         ));
 
 
